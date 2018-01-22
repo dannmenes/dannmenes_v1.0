@@ -1,0 +1,45 @@
+.white-box{
+    font-size: 14px;
+}
+
+#front-page{
+  #welcome{
+      margin-top: 150px;
+      strong{
+          font-size:  50px;
+      }
+  }
+
+  #options{
+
+      li{
+          margin-left: 90px;
+          margin-right: 90px;
+      }
+
+  }
+}
+
+#about-me{
+  #biography{
+        width: 80%;
+
+        line-height: 1.1em;
+
+        /*Modifying text inside*/
+        h3{
+            font-size: 16px;
+        }
+        p{
+            font-size: 12px;
+        }
+    }
+
+    #biography-pic{
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        width: 100%;
+        float: none;
+    }
+}

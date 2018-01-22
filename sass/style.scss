@@ -1,0 +1,280 @@
+/* Start with a clean slate */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    color:#ffffff;  //Change this in config file!!!!
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul,li{
+    list-style: none;
+}
+
+
+/* Used to center the li elements in social class */
+.social-media ul{
+    margin: auto;
+    text-align: center;
+}
+
+.social-media li{
+    display: inline-block;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+/*Creating a box around the two li elements*/
+.white-box{
+    padding: 15px 25px;
+    border: 4px #ffffff solid;
+    opacity: .8;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.white-box:hover{
+    background: #ffffff;
+    opacity: .8;
+    cursor: pointer;
+    a{
+        color: #000000;
+    }
+}
+
+/* Adding styling to gallery (Pictures on last part) */
+.gallery img{
+    border: 2px #fff solid;
+    box-sizing: border-box;
+    width: 400px;
+    height: 275px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.gallery img:hover{
+    cursor: pointer;
+}
+
+/*******************************************************************************
+Front Page
+*******************************************************************************/
+#front-page{
+    background: url('../img/mount-fuji-o.jpg') no-repeat;
+    background-size: cover;
+    height: 100vh;
+
+    #main-header{
+        width: 100%;
+        overflow: hidden;
+        border-bottom: 4px #ffffff solid;
+
+        margin: auto;
+        text-align: center;
+
+        /*Social Media Section*/
+        #social{
+            display: inline-block;
+            width: 30%;
+            height: 40px;
+            float: left;
+
+            padding-top: 5px;
+            margin-top: 30px;
+
+        }
+
+        /*Name*/
+        #name{
+            display: inline-block;
+            width: 30%;
+            overflow: hidden;
+
+            font-size: 22px;
+            text-transform: uppercase;
+
+            margin-top: 45px;
+        }
+
+        /*Contact information*/
+        #contact{
+            display: inline-block;
+
+            float: right;
+            width: 30%;
+            overflow: hidden;
+
+            font-size: 12px;
+
+            margin-top: 45px;
+
+        }
+    }
+
+    #welcome{
+        width: 100%;
+        height: 85px;
+
+
+        margin: auto;
+        text-align: center;
+
+        margin-top: 200px;
+        strong{
+            font-size:  75px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+    }
+
+    #options{
+        margin: auto;
+        text-align: center;
+        width: 100%;
+
+        margin-top: 125px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+
+        /* Making the li elements centered and adding space between them */
+        ul{
+            margin: auto;
+            text-align: center;
+        }
+
+        li{
+            display: inline-block;
+            font-weight: bolder;
+            margin-left: 125px;
+            margin-right: 125px;
+        }
+
+    }
+}
+
+/*******************************************************************************
+About Me Page
+*******************************************************************************/
+#about-me{
+    background: url('../img/flower2-o.jpg');
+    background-size: cover;
+
+    border-top: 2px #ffffff solid;
+    border-bottom: 2px #ffffff solid;
+
+    width: 100%;
+    overflow: hidden;
+
+    margin: auto;
+    text-align: center;
+
+    padding-top: 30px;
+    position: relative;
+
+    /*Moving the text div to the left and adjusting margins, etc.*/
+    #biography{
+        width: 45%;
+        display: inline-block;
+        float: left;
+
+        line-height: 1.5em;
+        padding-left: 30px;
+        padding-bottom: 30px;
+
+        /*Modifying text inside*/
+        h3{
+            font-size: 20px;
+            font-weight: bold;
+            text-align: left;
+            padding-bottom: 15px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: bold;
+            text-align: left;
+        }
+    }
+
+    #biography-pic{
+        display: inline-block;
+
+        padding-top: 30px;
+        padding-bottom: 30px;
+        width: 50%;
+        float: right;
+
+        #about-me-footer{
+            margin:auto;
+            text-align: center;
+            width: 100%;
+            border: 0;
+        }
+
+        #bio-pic{
+            border: 2px #ffffff solid;
+        }
+
+
+    }
+}
+
+/*******************************************************************************
+Gallery Page
+*******************************************************************************/
+#Gallery{
+    background: url('../img/beach.jpg') no-repeat;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+
+    #header-gal{
+        padding: 40px 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #last-opt{
+        margin: auto;
+        padding-top: 20px;
+        width: 50%;
+    }
+
+    #gallery-footer{
+        padding-top: 20px;
+    }
+
+    #copyright{
+        width: 100%;
+
+        margin: auto;
+        text-align: center;
+    }
+
+}
+
+/*******************************************************************************
+Media Queries
+*******************************************************************************/
+@media(max-width: 950px){
+    @import "_mobile950.scss";
+}
+
+@media(max-width: 650px){
+    @import "_mobile650.scss";
+}
+
+@media(max-width: 400px){
+    @import "_mobile400.scss";
+}

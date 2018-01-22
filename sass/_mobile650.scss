@@ -1,0 +1,119 @@
+.social-media li{
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.gallery img{
+    border: 2px #fff solid;
+    box-sizing: border-box;
+    width: 80%;
+    height: 225px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+#front-page{
+    background-position: right;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    #main-header{
+        margin: 0 auto;
+
+        #name{
+            width: 100%;
+            display: block;
+            font-size: 17px;
+            margin-top: 5px;
+        }
+
+        #social{
+            width: 100%;
+            display: block;
+            float: none;
+            margin-top: 0px;
+        }
+
+        #contact{
+            width: 100%;
+            display: block;
+            float: none;
+            font-size: 11px;
+            margin-top: 5px;
+            margin-bottom: 3px;
+        }
+    }
+
+    #welcome{
+        margin-top: 150px;
+        strong{
+            font-size:  55px;
+        }
+    }
+
+    #options{
+        margin-top: 0;
+        /* Making the li elements centered and adding space between them */
+        ul{
+            float: none;
+            margin: auto;
+            text-align: center;
+        }
+
+        li{
+            width: 25%;
+            margin-top: 30px;
+            margin-left: 125px;
+            margin-right: 125px;
+        }
+
+    }
+}
+
+#about-me{
+  background: url('../img/flower2-o.jpg');
+  background-position: left;
+  /*Moving the text div to the left and adjusting margins, etc.*/
+  #biography{
+        width: 90%;
+        display: block;
+        float: none;
+
+        line-height: 1.2em;
+
+        /*Modifying text inside*/
+        h3{
+            font-size: 18px;
+            text-align: center;
+            padding-bottom: 15px;
+        }
+        p{
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+
+    #biography-pic{
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        width: 100%;
+        float: none;
+    }
+}
+
+#Gallery{
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+
+    #header-gal{
+        padding: 20px 20px;
+        font-size: 18px;
+    }
+
+
+}

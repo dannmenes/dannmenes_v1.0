@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- Viewport line makes website responsive!!-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Personal Website created by Danny Meneses">
+        <meta name="keywords" content="web design, free lancer, front-end web developer, web developer, danny, blog, photography">
+        <meta name="author" content="Danny Meneses">
+        <title>Danny Meneses | Welcome</title>
+        <link rel="icon" href="img/wolf.png">
+
+        <!-- Link style sheets most likely be a CSS Pre-processor SASS and the js style sheets-->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/jquery.fancybox.css">
+        <link rel="stylesheet" href="css/jquery.fancybox-buttons.css">
+        <link rel="stylesheet" href="css/jquery.fancybox-thumbs.css">
+
+        <!--Liniking font family -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+        <!-- Adding JQuery For Scroll to animations -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.fancybox.pack.js"></script>
+        <script src="js/jquery.fancybox-buttons.js"></script>
+        <script src="js/jquery.fancybox-media.js"></script>
+        <script src="js/jquery.fancybox-thumbs.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                //FOR GALLERY POP UP IMAGES ANIMATION
+                $(".fancybox").fancybox();
+                $(".fancybox").fancybox({
+                		openEffect	: 'none',
+                		closeEffect	: 'none'
+	              });
+
+                $("a.fancybox").fancybox({
+                     padding: 0
+                });
+                //FOR SCROLLING EFFECT
+                // Add smooth scrolling to all links
+                $("a").on('click', function(event) {
+                        // Make sure this.hash has a value before overriding default behavior
+                        if (this.hash !== "") {
+                          // Prevent default anchor click behavior
+                          event.preventDefault();
+                          // Store hash
+                          var hash = this.hash;
+                          // Using jQuery's animate() method to add smooth page scroll
+                          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                          $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                          }, 1000, function(){
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                      });
+                    } // End if
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+      <!-- Creating the front page of the website-->
+      <section id="front-page">
+          <!-- Header Section Inside the Front Page-->
+          <header>
+              <!-- Only one header of this type so use an id-->
+              <!-- This Div contains Social Media, Name, Contact info -->
+              <div id="main-header">
+                  <div id="social">
+                        <!-- Make a class type, Going to be used through webpage multiple times-->
+                        <ul class="social-media">
+                            <!-- Create a inner ul list to have social media info, target attribute opens a new tab-->
+                            <li><a href="https://www.instagram.com/zeus.0101/" target="_blank"><img src="./img/instagram.png" width="30px" height="30px"></a></li>
+                            <li><a href="https://twitter.com/dann_menes996" target="_blank"><img src="./img/twitter.gif" width="30px" height="30px"></a></li>
+                            <li><a href="https://www.facebook.com/profile.php?id=100007469088922" target="_blank"><img src="./img/facebook.png" width="35px" height="35px"></a></li>
+                        </ul>
+                  </div>
+                  <div id="name">
+                      <h1>Danny Meneses<h1>
+                  </div>
+
+                  <div id="contact">
+                      <h3>Contact Me: dannmenes@gmail.com<h3>
+                  </div>
+              </div>
+          </header>
+
+          <!-- Div that creates the WELCOME text in the middle of the front-page-->
+          <div id="welcome">
+              <!-- Strong tag to modify in css file(make bold change sieze, etc.)-->
+              <h1><strong>welcome</strong></h1>
+          </div>
+
+          <!-- Div will contain two options 'About Me' and 'Gallery' with a hover animation-->
+          <div id="options">
+              <ul>
+                <!-- Create a white box class to create outlinne effect and hover, also used in gallery page-->
+                <li class="white-box"><a href="#about-me">ABOUT ME</a></li>
+                <li class="white-box"><a href="#Gallery">GALLERY</a></li>
+              </ul>
+          </div>
+      </section>
+
+      <!--Creating the About Me page, also section will change background color-->
+      <section id="about-me">
+          <!--Div used to contain text about me-->
+          <div id="biography">
+              <h3>ABOUT ME</h3>
+              <p>
+                My name is Danny Meneses. I’m a junior at the University of Texas at Arlington. As of today I’m working towards a bachelor’s degree in computer science while completing minors in mathematics and french.
+                Apart from getting my degree and minors, I have decided to dedicate my time in becoming a front-end web developer.<br /><br />
+                Recently I discovered my passion for web development. I get this sense that a website is an art piece were a person with a creative mind can express his or her creativity.
+                Having a creative mind myself and experience in coding, what better way for me to express my creativity by creating and designing websites.
+                All my websites will be impassionedly hand coded, for creating them I will be using latest technologies like HTML5, CSS3, JavaScript, and JQuery.
+                Im still in the process of learning as I have just  started but I intend to expand my knowledge and skills.
+                This is my very first website and I intend to create more websites in the future and eventually become a freelancer.<br /><br />
+                Some personal facts about me, I am 20 years old. I was born in Los Angeles, California but raised in Arlington, Texas.
+                In my spare time I'm usually drawing or coming up with new designs for websites. I often go to the movies, my favorite movie genre is drama/thrillers.
+                I also have a big interest in photography, feel free to check out my gallery!
+              </p>
+          </div>
+
+          <!--Div with class bio will have my picture to modify and change float -->
+          <div id="biography-pic">
+              <!--Place my Image here!!!-->
+              <img id="bio-pic" src="./img/danny.jpg" alt="Picture of Danny Meneses" width="300px" height="400px">
+              <!-- Create ul to contain social media info, already made in home page!!-->
+              <footer id="about-me-footer">
+                <ul class="social-media">
+                    <!-- Create a inner ul list to have social media info, target attribute opens a new tab-->
+                    <li><a href="https://www.instagram.com/zeus.0101/" target="_blank"><img src="./img/instagram.png" width="30px" height="30px"></a></li>
+                    <li><a href="https://twitter.com/dann_menes996" target="_blank"><img src="./img/twitter.gif" width="30px" height="30px"></a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=100007469088922" target="_blank"><img src="./img/facebook.png" width="35px" height="35px"></a></li>
+                </ul>
+              </footer>
+          </div>
+
+
+      </section>
+
+      <!-- Gallery Page with 9 images -->
+      <section id="Gallery">
+          <!-- top will have 'GALLERY' and a border box with 'Back To Top'-->
+          <header id="header-gal">
+              <h3>GALLERY</h3>
+          </header>
+          <!-- maiddle will have the 9 pictures -->
+          <div class="gallery">
+              <a class="fancybox" rel="gallery1" href="img/Dallas-o.jpg"><img src="img/Dallas-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/attstadium-o.jpg"><img src="img/attstadium-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/view-o.jpg"><img src="img/view-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/polandSnow-o.jpg"><img src="img/polandSnow-o.jpg" ></a>
+              <a class="fancybox" rel="gallery1" href="img/amc-o.jpg"><img src="img/amc-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/skyline-o.jpg"><img src="img/skyline-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/ramp-o.jpg"><img src="img/ramp-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/Dragon-o.jpg"><img src="img/Dragon-o.jpg"></a>
+              <a class="fancybox" rel="gallery1" href="img/cafe-o.jpg"><img src="img/cafe-o.jpg"></a>
+          </div>
+
+          <!-- bottom will have 'BACK TO TOP' option-->
+          <div id="last-opt">
+              <ul>
+                <!-- Create a white box class to create outlinne effect and hover, also used in gallery page-->
+                <li class="white-box"><a href="#front-page">BACK TO TOP</a></li>
+              </ul>
+          </div>
+
+          <div id="gallery-footer">
+              <!-- Make a class type, Going to be used through webpage multiple times-->
+              <ul class="social-media">
+                  <!-- Create a inner ul list to have social media info, target attribute opens a new tab-->
+                  <li><a href="https://www.instagram.com/zeus.0101/" target="_blank"><img src="./img/instagram.png" width="30px" height="30px"></a></li>
+                  <li><a href="https://twitter.com/dann_menes996" target="_blank"><img src="./img/twitter.gif" width="30px" height="30px"></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=100007469088922" target="_blank"><img src="./img/facebook.png" width="35px" height="35px"></a></li>
+              </ul>
+          </div>
+          <footer id="copyright">
+              <p>Copyright &copy; 2017, Danny Meneses</p>
+          </footer>
+      </section>
+
+
+    </body>
+</htm>
